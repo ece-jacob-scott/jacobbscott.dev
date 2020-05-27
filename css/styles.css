@@ -1,10 +1,11 @@
-html, body {
+html,
+body {
   background-color: #447864;
   width: 100%;
   height: 100%;
   margin: 0 auto;
   /* 1 pixel black shadow to left, top, right and bottom */
-  font-family: 'Courier New', Courier, monospace; 
+  font-family: "Courier New", Courier, monospace;
   color: #d9d9d9;
 }
 
@@ -15,9 +16,29 @@ html, body {
   margin-right: auto;
 }
 
+.project-sec {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 800px;
+}
+
+.project-desc {
+  margin-left: 15px;
+}
+
 .container-sec {
   width: 100%;
   padding-top: 4px;
+}
+
+.inline-link {
+  color: #d9d9d9;
+}
+
+.inline-link:hover {
+  color: #68ebb9;
 }
 
 #name-plate {
@@ -29,12 +50,11 @@ html, body {
   margin: 0 auto;
   max-width: 500px;
   padding: 10px 0;
+  text-align: center;
 }
 
 #icon-links {
   padding-top: 20px;
-  padding-left: 4px;
-  padding-right: 4px;
 }
 
 #icon-holder {
@@ -46,12 +66,53 @@ html, body {
 
 #twitter-icon {
   font-size: 40px;
+  color: #d9d9d9;
+}
+
+#twitter-icon:hover {
+  color: #1da1f2;
 }
 
 #github-icon {
   font-size: 40px;
+  color: #d9d9d9;
+}
+
+#github-icon:hover {
+  color: #24292e;
 }
 
 #linkedin-icon {
   font-size: 40px;
+  color: #d9d9d9;
+}
+
+#linkedin-icon:hover {
+  color: #2867b2;
+}
+
+#footer-sec {
+  background-color: #404040;
+  padding: 15px 0;
+  text-align: center;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 100px) and (max-device-width: 648px) {
+  .project-sec {
+    display: block;
+    margin: 0 auto;
+    padding: 20px 5px;
+    max-width: 800px;
+  }
+
+  .project-desc {
+    margin-left: 8px;
+    text-align: center;
+  }
+
+  .project-img {
+    display: block;
+    margin: 0 auto;
+  }
 }
