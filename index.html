@@ -65,39 +65,34 @@
       </div>
     </section>
     <section class="project-sec">
-      <!-- <img
-        class="project-img"
-        src="https://via.placeholder.com/250x150"
-        alt="BLST Image"
-      /> -->
-      <!-- <img
-        class="project-img"
-        src="/images/blst_pedal_resize.png"
-        alt="BLST Image"
-      /> -->
-      <p class="project-desc">
-        <b>
-          For my senior project I worked with a group of 3 other electrical and
-          computer engineers to design an adaptable assistive foot pedal system.
-          My contribution consisted of building all the software, our language
-          of choice was python and I developed a library which used observers to
-          interact with the arduino on the pedals. A developer could then use my
-          library to integrate with applications on the users computer.
-          <a
-            class="inline-link"
-            href="https://github.com/ece-jacob-scott/BLSTController"
-            target="_blank"
-            >Github</a
-          >
-        </b>
-      </p>
+      <button
+        id="blst_content_btn"
+        class="collapse-btn"
+        onclick="toggleCollapse('blst_content')"
+      >
+        Senior Design Project
+      </button>
+      <div id="blst_content">
+        <p class="project-desc">
+          <b>
+            For my senior project I worked with a group of 3 other electrical
+            and computer engineers to design an adaptable assistive foot pedal
+            system. My contribution consisted of building all the software, our
+            language of choice was python and I developed a library which used
+            observers to interact with the arduino on the pedals. A developer
+            could then use my library to integrate with applications on the
+            users computer.
+            <a
+              class="inline-link"
+              href="https://github.com/ece-jacob-scott/BLSTController"
+              target="_blank"
+              >Github</a
+            >
+          </b>
+        </p>
+      </div>
     </section>
     <section class="project-sec">
-      <!-- <img
-        class="project-img"
-        src="images/ece_434_project_resize.png"
-        alt="Object Tracking"
-      /> -->
       <p class="project-desc">
         <b>
           The final assignment for a multimedia systems class was to implement
@@ -115,11 +110,6 @@
       </p>
     </section>
     <section class="project-sec">
-      <!-- <img
-        class="project-img"
-        src="/images/dining_menus_resize.png"
-        alt="UIC dining menu"
-      /> -->
       <p class="project-desc">
         <b>
           When I started working as a full stack developer at UIC my first
@@ -139,11 +129,6 @@
       </p>
     </section>
     <section class="project-sec">
-      <!-- <img
-        class="project-img"
-        src="images/lockers_resize.png"
-        alt="UIC locker registration"
-      /> -->
       <p class="project-desc">
         <b>
           The UIC locker registration site is a site used by UIC students to
@@ -165,7 +150,12 @@
       </p>
     </section>
     <footer id="footer-sec">
-      <p>powered by Github pages</p>
+      <p>
+        powered by
+        <a class="inline-link" href="https://pages.github.com/" target="_blank"
+          >Github pages</a
+        >
+      </p>
     </footer>
     <script src="js/scripts.js"></script>
   </body>

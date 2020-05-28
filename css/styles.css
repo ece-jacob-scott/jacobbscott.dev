@@ -4,7 +4,6 @@ body {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  /* 1 pixel black shadow to left, top, right and bottom */
   font-family: "Courier New", Courier, monospace;
   color: #d9d9d9;
 }
@@ -19,8 +18,6 @@ body {
 }
 
 .project-sec {
-  display: flex;
-  align-items: center;
   margin: 0 auto;
   padding: 20px 0;
   max-width: 800px;
@@ -97,6 +94,29 @@ body {
   background-color: #404040;
   padding: 15px 0;
   text-align: center;
+}
+
+#blst_content {
+  display: none;
+  overflow: hidden;
+  background-color: #4eaa87;
+}
+
+.collapse-btn {
+  width: 100%;
+  display: block;
+  background-color: #68ebb9;
+  font-size: large;
+  outline: none;
+  border: none;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+  padding: 18px;
+}
+
+.collapse-btn:hover,
+.collapse-btn-active {
+  background-color: #41886d;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
