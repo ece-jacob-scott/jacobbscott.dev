@@ -8,6 +8,10 @@ body {
   color: #d9d9d9;
 }
 
+main {
+  min-height: calc(100vh - 88px);
+}
+
 .header-img {
   border-radius: 50%;
   display: block;
@@ -92,11 +96,11 @@ body {
 
 #footer-sec {
   background-color: #404040;
-  padding: 15px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
-#blst_content {
+.hidden_content {
   display: none;
   overflow: hidden;
   background-color: #4eaa87;
@@ -114,9 +118,16 @@ body {
   padding: 18px;
 }
 
-.collapse-btn:hover,
+.collapse-btn:hover {
+  background-color: #50a584;
+}
+
 .collapse-btn-active {
-  background-color: #41886d;
+  background-color: #68ebb9;
+}
+
+.collapse-btn:active {
+  transform: translateY(4px);
 }
 
 /* Smartphones (portrait and landscape) ----------- */

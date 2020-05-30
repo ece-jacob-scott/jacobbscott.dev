@@ -15,140 +15,170 @@
   </head>
   <body>
     <br />
-    <section id="intro-sec" class="container-sec">
-      <!-- <img
+    <main>
+      <section id="intro-sec" class="container-sec">
+        <!-- <img
         src="https://via.placeholder.com/150"
         class="header-img"
         alt="Personal image"
       /> -->
-      <img
-        src="images/headshot_3.jpg"
-        class="header-img"
-        alt="Personal image"
-      />
-      <h1 id="name-plate">
-        Hi, I'm Jacob &#128075;
-      </h1>
-      <h3 id="description">
-        I am a software developer interested in web technologies with a
-        background in Vue, Python, and Node. I worked as a full stack developer
-        at
-        <a
-          class="inline-link"
-          href="https://twitter.com/UICEngineering"
-          target="_blank"
-          >UIC</a
+        <img
+          src="images/headshot_3.jpg"
+          class="header-img"
+          alt="Personal image"
+        />
+        <h1 id="name-plate">
+          Hi, I'm Jacob &#128075;
+        </h1>
+        <h3 id="description">
+          I am a software developer interested in web technologies with a
+          background in Vue, Python, and Node. I worked as a full stack
+          developer at
+          <a
+            class="inline-link"
+            href="https://twitter.com/UICEngineering"
+            target="_blank"
+            >UIC</a
+          >
+          and currently work at
+          <a
+            class="inline-link"
+            href="https://twitter.com/CapitalOne"
+            target="_blank"
+            >Capital One</a
+          >.
+        </h3>
+      </section>
+      <section id="icon-links" class="container-sec">
+        <div id="icon-holder">
+          <a href="https://twitter.com/frodos_brother" target="_blank">
+            <i id="twitter-icon" class="fab fa-twitter-square"></i>
+          </a>
+          <a href="https://github.com/ece-jacob-scott" target="_blank">
+            <i id="github-icon" class="fab fa-github-square"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jacob-scott-9a5a20164/"
+            target="_blank"
+          >
+            <i id="linkedin-icon" class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </section>
+      <section class="project-sec">
+        <button
+          id="blst_content_btn"
+          class="collapse-btn"
+          onclick="toggleCollapse('blst_content')"
         >
-        and currently work at
-        <a
-          class="inline-link"
-          href="https://twitter.com/CapitalOne"
-          target="_blank"
-          >Capital One</a
-        >.
-      </h3>
-    </section>
-    <section id="icon-links" class="container-sec">
-      <div id="icon-holder">
-        <a href="https://twitter.com/frodos_brother" target="_blank">
-          <i id="twitter-icon" class="fab fa-twitter-square"></i>
-        </a>
-        <a href="https://github.com/ece-jacob-scott" target="_blank">
-          <i id="github-icon" class="fab fa-github-square"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/jacob-scott-9a5a20164/"
-          target="_blank"
+          Senior Design Project
+        </button>
+        <div id="blst_content" class="hidden_content">
+          <p class="project-desc">
+            <b>
+              For my senior project I worked with a group of 3 other electrical
+              and computer engineers to design an adaptable assistive foot pedal
+              system. My contribution consisted of building all the software,
+              our language of choice was python and I developed a library which
+              used observers to interact with the arduino on the pedals. A
+              developer could then use my library to integrate with applications
+              on the users computer.
+              <a
+                class="inline-link"
+                href="https://github.com/ece-jacob-scott/BLSTController"
+                target="_blank"
+                >Github</a
+              >
+            </b>
+          </p>
+        </div>
+      </section>
+      <section class="project-sec">
+        <button
+          id="object_tracking_btn"
+          class="collapse-btn"
+          onclick="toggleCollapse('object_tracking')"
         >
-          <i id="linkedin-icon" class="fab fa-linkedin"></i>
-        </a>
-      </div>
-    </section>
-    <section class="project-sec">
-      <button
-        id="blst_content_btn"
-        class="collapse-btn"
-        onclick="toggleCollapse('blst_content')"
-      >
-        Senior Design Project
-      </button>
-      <div id="blst_content">
-        <p class="project-desc">
-          <b>
-            For my senior project I worked with a group of 3 other electrical
-            and computer engineers to design an adaptable assistive foot pedal
-            system. My contribution consisted of building all the software, our
-            language of choice was python and I developed a library which used
-            observers to interact with the arduino on the pedals. A developer
-            could then use my library to integrate with applications on the
-            users computer.
-            <a
-              class="inline-link"
-              href="https://github.com/ece-jacob-scott/BLSTController"
-              target="_blank"
-              >Github</a
-            >
-          </b>
-        </p>
-      </div>
-    </section>
-    <section class="project-sec">
-      <p class="project-desc">
-        <b>
-          The final assignment for a multimedia systems class was to implement
-          an algorithm from any scholarly source. I decided to work on motion
-          tracking using a strategy which analyses color video, this concept was
-          originally used in game development in the early 2000's. I used Python
-          for the project along with the libraries numpy and cv2.
-          <a
-            class="inline-link"
-            href="https://github.com/ece-jacob-scott/object_tracking"
-            target="_blank"
-            >Github</a
-          >
-        </b>
-      </p>
-    </section>
-    <section class="project-sec">
-      <p class="project-desc">
-        <b>
-          When I started working as a full stack developer at UIC my first
-          project was to build the dining and nutrition menu application for
-          resident students. The application informs UIC residents about what
-          food is being served at the multiple cafeterias on campus with options
-          to filter the options by day or dietary restrictions. This was the
-          first front-end project I built using Vue and I'm very proud of how it
-          turned out.
-          <a
-            class="inline-link"
-            href="https://cas.uic.edu/dining/menus/"
-            target="_blank"
-            >Site</a
-          >
-        </b>
-      </p>
-    </section>
-    <section class="project-sec">
-      <p class="project-desc">
-        <b>
-          The UIC locker registration site is a site used by UIC students to
-          rent lockers from multiple locations across campus. I headed the api
-          and database portion of the project while I worked with a team member
-          on the front-end. On this project I learned how to create a database
-          schema with sql and create an api with the express framework. This
-          project also allowed me to get better at communication with
-          management, clients, and other developers.
-          <a
-            class="inline-link"
-            href="https://apps.sa.uic.edu/lrs/#"
-            target="_blank"
-            >Site</a
-          >
-          (unfortunatley unless you have a uic account you cannot access this
-          site)
-        </b>
-      </p>
-    </section>
+          Object Tracking
+        </button>
+        <div id="object_tracking" class="hidden_content">
+          <p class="project-desc">
+            <b>
+              The final assignment for a multimedia systems class was to
+              implement an algorithm from any scholarly source. I decided to
+              work on motion tracking using a strategy which analyses color
+              video, this concept was originally used in game development in the
+              early 2000's. I used Python for the project along with the
+              libraries numpy and cv2.
+              <a
+                class="inline-link"
+                href="https://github.com/ece-jacob-scott/object_tracking"
+                target="_blank"
+                >Github</a
+              >
+            </b>
+          </p>
+        </div>
+      </section>
+      <section class="project-sec">
+        <button
+          id="dining_menus_btn"
+          class="collapse-btn"
+          onclick="toggleCollapse('dining_menus')"
+        >
+          Dining Menu Site
+        </button>
+        <div id="dining_menus" class="hidden_content">
+          <p class="project-desc">
+            <b>
+              When I started working as a full stack developer at UIC my first
+              project was to build the dining and nutrition menu application for
+              resident students. The application informs UIC residents about
+              what food is being served at the multiple cafeterias on campus
+              with options to filter the options by day or dietary restrictions.
+              This was the first front-end project I built using Vue and I'm
+              very proud of how it turned out.
+              <a
+                class="inline-link"
+                href="https://cas.uic.edu/dining/menus/"
+                target="_blank"
+                >Site</a
+              >
+            </b>
+          </p>
+        </div>
+      </section>
+      <section class="project-sec">
+        <button
+          id="lockers_site_btn"
+          class="collapse-btn"
+          onclick="toggleCollapse('lockers_site')"
+        >
+          UIC Locker Registration
+        </button>
+        <div id="lockers_site" class="hidden_content">
+          <p class="project-desc">
+            <b>
+              The UIC locker registration site is a site used by UIC students to
+              rent lockers from multiple locations across campus. I headed the
+              api and database portion of the project while I worked with a team
+              member on the front-end. On this project I learned how to create a
+              database schema with sql and create an api with the express
+              framework. This project also allowed me to get better at
+              communication with management, clients, and other developers.
+              <a
+                class="inline-link"
+                href="https://apps.sa.uic.edu/lrs/#"
+                target="_blank"
+                >Site</a
+              >
+              (unfortunatley unless you have a uic account you cannot access
+              this site)
+            </b>
+          </p>
+        </div>
+      </section>
+    </main>
     <footer id="footer-sec">
       <p>
         powered by
