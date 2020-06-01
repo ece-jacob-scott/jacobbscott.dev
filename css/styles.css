@@ -100,6 +100,16 @@ h2 {
   color: #2867b2;
 }
 
+#resume-icon {
+  cursor: pointer;
+  color: #d9d9d9;
+}
+
+#resume-icon:hover {
+  cursor: pointer;
+  color: #68ebb9;
+}
+
 #footer-sec {
   background-color: #404040;
   padding: 10px 0;
