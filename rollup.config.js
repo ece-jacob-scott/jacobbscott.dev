@@ -3,7 +3,7 @@ import blogCompiler from "./rollup-plugin-blog-compiler";
 
 export default {
   input: pkg.main,
-  outpus: {
+  output: {
     file: "./js/bundle.js",
     format: "iife",
   },
