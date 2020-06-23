@@ -45,12 +45,24 @@ const blogHomeTemplatePath = path.resolve("./templates/blog_home.html");
  */
 const blogIndexElement = ({ title, date, description, path }, hash) => {
   return `
-    <p><a href="/blogs/${date.getFullYear()}/${title
+  <section class="index-element">
+  <h1 class="blog-title"><a 
+    href="/blogs/${date.getFullYear()}/${title
     .toLowerCase()
     .split(" ")
-    .join("_")}-${hash}.html">${title}</a>: ${
-    date.getMonth() + 1
-  }-${date.getDate()}-${date.getFullYear()}</p>
+    .join("_")}-${hash}.html">
+    ${title}</a></h1>
+  <p class="under-title">
+    :${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}
+  </p>
+  <p class="blog-description">${description}
+    <a href="/blogs/${date.getFullYear()}/${title
+    .toLowerCase()
+    .split(" ")
+    .join("_")}-${hash}.html">Read More...</a>
+  </p>
+</section>
+<br/>
   `;
 };
 
