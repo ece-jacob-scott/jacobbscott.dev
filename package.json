@@ -19,5 +19,8 @@
   "devDependencies": {
     "marked": "^1.1.0",
     "rollup": "^2.16.1"
+  },
+  "dependencies": {
+    "glob": "^7.1.6"
   }
 }
