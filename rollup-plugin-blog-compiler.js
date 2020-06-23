@@ -44,7 +44,6 @@ const blogHomeTemplatePath = path.resolve("./templates/blog_home.html");
  * home page.
  */
 const blogIndexElement = ({ title, date, description, path }, hash) => {
-  // ...find the actual name of the file from pageHashMap
   return `
     <p><a href="/blogs/${date.getFullYear()}/${title
     .toLowerCase()
@@ -55,7 +54,11 @@ const blogIndexElement = ({ title, date, description, path }, hash) => {
   `;
 };
 
-const createURL = ({ title, date, description, _ }, hash) => {
+/**
+ * Takes the blog config object and a hash then makes the file path for the new
+ * html file
+ */
+const createURL = ({ title, date, description }, hash) => {
   return path.resolve(
     `./blogs/${date.getFullYear()}/${title
       .toLowerCase()
