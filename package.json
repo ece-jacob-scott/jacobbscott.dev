@@ -1,0 +1,26 @@
+{
+  "name": "portfolio_site",
+  "version": "1.0.0",
+  "description": "My portfolio site",
+  "main": "./src/main.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ece-jacob-scott/home_site.git"
+  },
+  "author": "Jacob Scott (scott.jacob97@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ece-jacob-scott/home_site/issues"
+  },
+  "homepage": "https://github.com/ece-jacob-scott/home_site#readme",
+  "devDependencies": {
+    "marked": "^1.1.0",
+    "rollup": "^2.16.1"
+  },
+  "dependencies": {
+    "glob": "^7.1.6"
+  }
+}
