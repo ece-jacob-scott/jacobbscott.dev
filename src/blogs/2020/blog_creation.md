@@ -84,7 +84,7 @@ far outweighs the extra upkeep.
 
 I've given you a very short overview of the technical design and decisions I
 made while creating this blogging feature if you wanted to look at the code
-this whole site is on my [public github]("https://github.com/ece-jacob-scott").
+this whole site is on my [public github](https://github.com/ece-jacob-scott).
 In the future I think it would be neat to have a cover photo for each blog, in
 the same vein as a medium article. For a simple blogging application I think
 this is a great start and I'm proud of the design and implementation.
@@ -95,5 +95,5 @@ For right now I believe this blogging feature works very well for me and
 hopefully it will inspire to write more about my projects as I continue
 developing. I will try and keep a list of features that I add in future to
 hopefully write an updated blog on later. If you have any questions or
-comments tweet at [me]("https://twitter.com/frodos_brother") :). Thank you for
+comments tweet at [me](https://twitter.com/frodos_brother) :). Thank you for
 reading my first blog I promise I will get better in the future.
