@@ -69,7 +69,7 @@ h2 {
   margin-bottom: 0px;
 }
 
-p {
+#blog-content > p {
   font-family: inherit;
   margin-top: 0px;
   line-height: 30px;

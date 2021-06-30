@@ -15,7 +15,7 @@
  * Future Consideration:
  * - The plugin should create year folders that don't exist yet if it's in the
  *   "src" directory.
- * - Look for future considerations to perfermence such as using pipes for all
+ * - Look for future considerations to performance such as using pipes for all
  *   the file writing/reading/transforming. Since this is a build step plugin
  *   the performance doesn't really matter.
  * - Add options to specify the paths to files.
