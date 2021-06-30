@@ -29,7 +29,7 @@
     <main>
       <section id="blog_content">
         <section id="blog_header">
-          <a href="/" target="_blank">Home</a>
+          <a href="/">Home</a>
         </section>
         <h1 id="creating-a-statically-generated-blog">Creating a Statically Generated Blog</h1>
 <h2 id="project-introduction">Project Introduction</h2>
@@ -39,7 +39,7 @@ features that I really wanted was a blog.</p>
 <h2 id="starting-the-project">Starting the Project</h2>
 <p>This is going to be a step by step guide on how to make a statically generated
 site with different pages. This post is going to bring you through the trails
-and turbulation that I encountered while adding this feature to my site.</p>
+and tribulation that I encountered while adding this feature to my site.</p>
 <p>The first problem was how to work around my hosting method, as you can probably
 tell this site is currently hosted using github pages. I love this feature of
 github for easy, free, and flexible website hosting. However, the only thing
@@ -49,10 +49,11 @@ me with only one option which was to generate the dynamic content beforehand.</p
 <p>Enter Rollup and the pandora&#39;s box that is frontend build tools. I had worked
 with simple build tools as an earlier developer working for my college but only
 tangentially never needing to go deep into their functions. I used webpack back
-then and loathed the experience everytime I needed work the config, so upon the
-high praise given by the http 203 podcast I decided to work with Rollup. This
-turned out to be the best decision of the project and will be using Rollup in
-the future!</p>
+then and loathed the experience every time I needed work the config, so upon the
+high praise given by the
+<a href="https://developers.google.com/web/shows/http203/podcast">HTTP 203</a> podcast I
+decided to work with Rollup. This turned out to be the best decision of the
+project and will be using Rollup in the future!</p>
 <h2 id="introducing-rollup-custom-plugins">Introducing Rollup Custom Plugins</h2>
 <p>The main site only uses a single javascript function for toggling the collapse
 elements so I don&#39;t really have a use of the main packaging functionality of
@@ -64,17 +65,17 @@ Rollup offers.</p>
   generateBundle: async function (options, bundle, isWrite) { ... },
 };</code></pre>
 <p>This is all a custom Rollup plugin is, just an object with a name and some
-functions that get run at different points in the build process. This makes for
-a very easy jumping off point for the static site generator.</p>
+functions that get run at different points in Rollup&#39;s build process. This makes
+for a very easy jumping off point for the static site generator.</p>
 <h2 id="repo-structure-and-config-files">Repo Structure and Config Files</h2>
-<p>To keep the repo relativily well organized I went through many different ways of
-organizing the blog files. My first instinct was to have implicit folders where
-the blogs markdown files lived and just have the plugin look in only those
-folders. This approach was decent and allowed me to start implimenting the
-actual functionality early on but as I kept thinking about adding more features
-such as description snippets, header images, etc. I realized that this approach
-was lacking. I ended up implementing a blog config file which will define all
-the posts as objects.</p>
+<p>Figuring out how to organize the blog files was a challenge and I went through
+many different iterations before settling on using a config file. My first
+instinct was to have implicit folders where the blogs markdown files lived and
+just have the plugin look in only those folders. This approach was decent and
+allowed me to start implementing the actual functionality early on but as I kept
+thinking about adding more features such as description snippets, header images,
+etc. I realized that this approach was lacking. I ended up implementing a blog
+config file which will define all the posts as objects.</p>
 <pre><code class="language-javascript">export default {
   blogs: [
     {
@@ -93,7 +94,7 @@ in the future if I wanted to I could add a header image by just adding a
 property to the blog object which points to an image and add that image to the
 index page. The only downside to this is that it adds one more config file to
 keep track of but I think the benefits of being able to add features on demand
-far outweighs the extra upkeep.</p>
+far outweighs the extra minimal upkeep.</p>
 <h2 id="conclusion-of-features">Conclusion of features</h2>
 <p>I&#39;ve given you a very short overview of the technical design and decisions I
 made while creating this blogging feature if you wanted to look at the code
