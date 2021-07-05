@@ -28,7 +28,7 @@ a {
 }
 
 a:hover {
-  color: #68ebb9;
+  color: var(--brand);
   cursor: pointer;
 }
 
@@ -43,7 +43,7 @@ a:hover {
 }
 
 .blog-title a:hover {
-  color: #68ebb9;
+  color: var(--brand);
   cursor: pointer;
 }
 

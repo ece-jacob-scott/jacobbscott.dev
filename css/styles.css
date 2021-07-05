@@ -1,11 +1,11 @@
 html,
 body {
-  background-color: #447864;
+  background-color: var(--surface1);
   width: 100%;
   height: 100%;
   margin: 0 auto;
   font-family: "Courier New", Courier, monospace;
-  color: #d9d9d9;
+  color: var(--test1);
 }
 
 main {
@@ -20,6 +20,9 @@ h2 {
 
 .header-img {
   border-radius: 50%;
+  border-width: 5px;
+  border-color: var(--brand);
+  border-style: solid;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -43,11 +46,11 @@ h2 {
 }
 
 .inline-link {
-  color: #d9d9d9;
+  color: var(--test1);
 }
 
 .inline-link:hover {
-  color: #68ebb9;
+  color: var(--brand);
 }
 
 #name-plate {
@@ -75,7 +78,7 @@ h2 {
 
 #twitter-icon {
   font-size: 40px;
-  color: #d9d9d9;
+  color: rgb(0, 0, 0);
 }
 
 #twitter-icon:hover {
@@ -84,16 +87,16 @@ h2 {
 
 #github-icon {
   font-size: 40px;
-  color: #d9d9d9;
+  color: rgb(0, 0, 0);
 }
 
 #github-icon:hover {
-  color: #24292e;
+  color: #494949;
 }
 
 #linkedin-icon {
   font-size: 40px;
-  color: #d9d9d9;
+  color: rgb(0, 0, 0);
 }
 
 #linkedin-icon:hover {
@@ -102,57 +105,27 @@ h2 {
 
 #blog-icon {
   font-size: 40px;
-  color: #d9d9d9;
+  color: rgb(0, 0, 0);
 }
 
 #blog-icon:hover {
-  color: #68ebb9;
+  color: var(--brand);
 }
 
 #resume-icon {
   cursor: pointer;
-  color: #d9d9d9;
+  color: rgb(0, 0, 0);
 }
 
 #resume-icon:hover {
   cursor: pointer;
-  color: #68ebb9;
+  color: var(--brand);
 }
 
 #footer-sec {
-  background-color: #404040;
+  background-color: var(--surface4);
   padding: 10px 0;
   text-align: center;
-}
-
-.hidden_content {
-  display: none;
-  overflow: hidden;
-  background-color: #4eaa87;
-}
-
-.collapse-btn {
-  width: 100%;
-  display: block;
-  background-color: #68ebb9;
-  font-size: large;
-  outline: none;
-  border: none;
-  font-family: "Courier New", Courier, monospace;
-  cursor: pointer;
-  padding: 18px;
-}
-
-.collapse-btn:hover {
-  background-color: #50a584;
-}
-
-.collapse-btn-active {
-  background-color: #68ebb9;
-}
-
-.collapse-btn:active {
-  transform: translateY(4px);
 }
 
 /* Smartphones (portrait and landscape) ----------- */

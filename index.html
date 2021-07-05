@@ -7,7 +7,12 @@
     <title>Jacob's Portfolio</title>
     <meta name="description" content="Home site for Jacob Scott" />
     <meta name="author" content="Jacob Scott (scott.jacob97@gmail.com)" />
+    <link rel="stylesheet" href="css/colors.css?v=1.0" />
     <link rel="stylesheet" href="css/styles.css?v=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <script
       src="https://kit.fontawesome.com/71ad1e1244.js"
@@ -24,7 +29,10 @@
           alt="Personal image"
         />
         <h1 id="name-plate">
-          Hi, I'm Jacob &#128075; <a href="/resume.pdf" target="_blank"><i id="resume-icon" class="fas fa-file"></i></a>
+          Hi, I'm Jacob &#128075;
+          <a href="/resume.pdf" target="_blank"
+            ><i id="resume-icon" class="fas fa-file"></i
+          ></a>
         </h1>
         <h3 id="description">
           I am a software developer interested in web technologies with a
@@ -58,35 +66,24 @@
             target="_blank"
           >
             <i id="linkedin-icon" class="fab fa-linkedin"></i>
-          <a 
-            href="/blogs/"
-          >
-            <i id="blog-icon" class="fas fa-blog"></i>
-          </a>
+            <!-- <a href="/blogs/">
+              <i id="blog-icon" class="fas fa-blog"></i>
+            </a> -->
           </a>
         </div>
       </section>
-      <h2>
-        Projects
-      </h2>
-      <section class="project-sec">
-        <button
-          id="blst_content_btn"
-          class="collapse-btn"
-          onclick="toggleCollapse('blst_content')"
-        >
-          Senior Design Project
-        </button>
-        <div id="blst_content" class="hidden_content">
+      <div class="main-carousel project-sec" data-flickity>
+        <div id="blst_content" class="carousel-cell" style="width: 80%">
+          <h2>Assistive Foot Pedal Device</h2>
           <p class="project-desc">
             <b>
               For my senior project I worked with a group of 3 other electrical
               and computer engineers to design an adaptable assistive foot pedal
-              system. My contribution consisted of building all the software,
-              our language of choice was python and I developed a library which
-              used observers to interact with the arduino on the pedals. A
-              developer could then use my library to integrate with applications
-              on the users computer.
+              system. My contribution consisted of writing all the software, our
+              language of choice was python and I developed a library which used
+              observers to interact with the arduino on the pedals. A developer
+              could then use my library to write applications for using the foot
+              pedals.
               <a
                 class="inline-link"
                 href="https://github.com/ece-jacob-scott/BLSTController"
@@ -102,16 +99,8 @@
             </b>
           </p>
         </div>
-      </section>
-      <section class="project-sec">
-        <button
-          id="object_tracking_btn"
-          class="collapse-btn"
-          onclick="toggleCollapse('object_tracking')"
-        >
-          Object Tracking Demonstration
-        </button>
-        <div id="object_tracking" class="hidden_content">
+        <div id="object_tracking" class="carousel-cell" style="width: 80%">
+          <h2>Object Tracking Final Project</h2>
           <p class="project-desc">
             <b>
               The final assignment for a multimedia systems class was to
@@ -129,16 +118,8 @@
             </b>
           </p>
         </div>
-      </section>
-      <section class="project-sec">
-        <button
-          id="dining_menus_btn"
-          class="collapse-btn"
-          onclick="toggleCollapse('dining_menus')"
-        >
-          Dining Menu Site
-        </button>
-        <div id="dining_menus" class="hidden_content">
+        <div id="dining_menus" class="carousel-cell" style="width: 80%">
+          <h2>Dining Menu Site for Students</h2>
           <p class="project-desc">
             <b>
               When I started working as a full stack developer at UIC my first
@@ -157,16 +138,8 @@
             </b>
           </p>
         </div>
-      </section>
-      <section class="project-sec">
-        <button
-          id="lockers_site_btn"
-          class="collapse-btn"
-          onclick="toggleCollapse('lockers_site')"
-        >
-          UIC Locker Registration Site
-        </button>
-        <div id="lockers_site" class="hidden_content">
+        <div id="lockers_site" class="carousel-cell" style="width: 80%">
+          <h2>UIC Locker Registration Site</h2>
           <p class="project-desc">
             <b>
               The UIC locker registration site is a site used by UIC students to
@@ -187,20 +160,24 @@
             </b>
           </p>
         </div>
-      </section>
+      </div>
     </main>
     <footer id="footer-sec">
       <p>
         powered by
         <a class="inline-link" href="https://pages.github.com/" target="_blank"
           >Github pages</a
-        > | email is 
-        <a 
-          class="inline-link" 
-          href="mailto:scott.jacob97@gmail.com" 
-          target="_blank">scott.jacob97@gmail.com</a>
+        >
+        | email is
+        <a
+          class="inline-link"
+          href="mailto:scott.jacob97@gmail.com"
+          target="_blank"
+          >scott.jacob97@gmail.com</a
+        >
       </p>
     </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
