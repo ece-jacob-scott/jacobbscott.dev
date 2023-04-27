@@ -19,7 +19,6 @@
   --shadow-strength-light: 0.02;
 
   /* dark */
-  /*
   --brand-dark: hsl(
     var(--brand-hue) calc(var(--brand-saturation) / 2)
       calc(var(--brand-lightness) / 1.5)
@@ -32,9 +31,7 @@
   --surface4-dark: hsl(var(--brand-hue) 5% 25%);
   --surface-shadow-dark: var(--brand-hue) 50% 3%;
   --shadow-strength-dark: 0.8;
-*/
   /* dim */
-  /*
   --brand-dim: hsl(
     var(--brand-hue) calc(var(--brand-saturation) / 1.25)
       calc(var(--brand-lightness) / 1.25)
@@ -48,7 +45,7 @@
   --surface-shadow-dim: var(--brand-hue) 30% 13%;
   --shadow-strength-dim: 0.2;
 }
-*/
+
 :root {
   color-scheme: light;
 
@@ -65,7 +62,6 @@
   --shadow-strength: var(--shadow-strength-light);
 }
 
-/*
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -81,7 +77,6 @@
     --shadow-strength: var(--shadow-strength-dark);
   }
 }
-*/
 
 [color-scheme="light"] {
   color-scheme: light;
@@ -96,7 +91,7 @@
   --surface-shadow: var(--surface-shadow-light);
   --shadow-strength: var(--shadow-strength-light);
 }
-/*
+
 [color-scheme="dark"] {
   color-scheme: dark;
 
@@ -124,4 +119,4 @@
   --surface-shadow: var(--surface-shadow-dim);
   --shadow-strength: var(--shadow-strength-dim);
 }
-  */
+
