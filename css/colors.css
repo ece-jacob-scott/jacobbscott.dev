@@ -63,6 +63,7 @@
   --shadow-strength: var(--shadow-strength-light);
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -78,6 +79,7 @@
     --shadow-strength: var(--shadow-strength-dark);
   }
 }
+*/
 
 [color-scheme="light"] {
   color-scheme: light;
