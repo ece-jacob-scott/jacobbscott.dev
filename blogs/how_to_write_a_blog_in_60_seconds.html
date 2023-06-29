@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>how_to_write_a_blog_in_60_seconds</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #bdae9d; background-color: #2a211c; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #44aa43; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #049b0a; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #44aa43; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #44aa43; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #049b0a; } /* SpecialChar */
+code span.ss { color: #049b0a; } /* SpecialString */
+code span.st { color: #049b0a; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #049b0a; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="/css/blog_styles.css" />
+</head>
+<body>
+<h1 id="how-to-write-a-blog-in-60-seconds-a-step-by-step-tutorial">How to write a blog in 60 seconds! (A step by step tutorial)</h1>
+<h2 id="step-1-procrastination-3-years">Step 1: Procrastination (3 years)</h2>
+<p>The first step in any successful project is to start with great intentions, overestimate the amount of work required, and then procrastinate for three years.</p>
+<p>Now that you’ve come back to the project it’s time to get rid of all the work that you put into the project before and start over.</p>
+<h2 id="step-2-research-2-hours">Step 2: Research (2 hours)</h2>
+<p>You know you don’t want to write a blog using HTML because you’re not a sadist but writing your own tool to compile markdown is how you got stuck in step 1. The next logical step is to find someone who did the work already and steal that. <a href="https://pandoc.org/demos.html">This looks good enough</a>!</p>
+<p>Now you have an HTML page from your markdown, but it looks like crap. Let’s add some css!</p>
+<div class="sourceCode" id="mycode"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="mycode-1" title="1"><span class="ex">pandoc</span> -s ... -o ... --css ... --highlight-style espresso</a></code></pre></div>
+<h2 id="step-3-creating-an-index-page-2-hours">Step 3: Creating an index page (2 hours)</h2>
+<p>Okay we have a tool that can turn our markdown musings into a functional HTML page, great. Now we need a page that people can go to to see what blogs we’ve written! Do we want to create this blog page ourselves every time we write a blog? Of course not, that would be silly.</p>
+<p>I bet we could do this only using bash utilities…</p>
+<p>hmmmm</p>
+<div class="sourceCode" id="find-start"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="find-start-1" title="1"><span class="fu">find</span> ... -type f</a></code></pre></div>
+<p>okay now I just need to parse the names of the files…</p>
+<div class="sourceCode" id="find-start"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="find-start-1" title="1"><span class="fu">find</span> ... -type f <span class="kw">|</span> <span class="fu">xargs</span> -I% basename % .md <span class="kw">|</span> <span class="fu">tr</span> <span class="st">&#39;_&#39;</span> <span class="st">&#39; &#39;</span></a></code></pre></div>
+<p>easy enough, now we need to put these file names into a link on a webpage…</p>
+</body>
+</html>

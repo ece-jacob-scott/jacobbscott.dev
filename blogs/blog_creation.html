@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>blog_creation</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #bdae9d; background-color: #2a211c; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #44aa43; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #049b0a; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #44aa43; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #44aa43; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #049b0a; } /* SpecialChar */
+code span.ss { color: #049b0a; } /* SpecialString */
+code span.st { color: #049b0a; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #049b0a; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="/css/blog_styles.css" />
+</head>
+<body>
+<h1 id="creating-a-statically-generated-blog">Creating a Statically Generated Blog</h1>
+<h2 id="project-introduction">Project Introduction</h2>
+<p>With the time between finishing my computer engineering degree and starting my first real adult job I decided to work on a personal website and one of the features that I really wanted was a blog.</p>
+<h2 id="starting-the-project">Starting the Project</h2>
+<p>This is going to be a step by step guide on how to make a statically generated site with different pages. This post is going to bring you through the trails and tribulation that I encountered while adding this feature to my site.</p>
+<p>The first problem was how to work around my hosting method, as you can probably tell this site is currently hosted using github pages. I love this feature of github for easy, free, and flexible website hosting. However, the only thing github pages does is serve static files from a github repo, which is perfect for most simple sites but I wanted to add some dynamic content with blogs. This left me with only one option which was to generate the dynamic content beforehand.</p>
+<p>Enter Rollup and the pandora’s box that is frontend build tools. I had worked with simple build tools as an earlier developer working for my college but only tangentially never needing to go deep into their functions. I used webpack back then and loathed the experience every time I needed work the config, so upon the high praise given by the <a href="https://developers.google.com/web/shows/http203/podcast">HTTP 203</a> podcast I decided to work with Rollup. This turned out to be the best decision of the project and will be using Rollup in the future!</p>
+<h2 id="introducing-rollup-custom-plugins">Introducing Rollup Custom Plugins</h2>
+<p>The main site only uses a single javascript function for toggling the collapse elements so I don’t really have a use of the main packaging functionality of Rollup for now. However, I do have a need for the simple plugin integration that Rollup offers.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb1-1" title="1"><span class="im">export</span> <span class="im">default</span> <span class="op">{</span></a>
+<a class="sourceLine" id="cb1-2" title="2">  <span class="dt">name</span><span class="op">:</span> <span class="st">&quot;blog-compiler&quot;</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-3" title="3">  <span class="dt">buildStart</span><span class="op">:</span> <span class="kw">async</span> <span class="kw">function</span> (options) <span class="op">{</span> ... <span class="op">},</span></a>
+<a class="sourceLine" id="cb1-4" title="4">  <span class="dt">generateBundle</span><span class="op">:</span> <span class="kw">async</span> <span class="kw">function</span> (options<span class="op">,</span> bundle<span class="op">,</span> isWrite) <span class="op">{</span> ... <span class="op">},</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="op">};</span></a></code></pre></div>
+<p>This is all a custom Rollup plugin is, just an object with a name and some functions that get run at different points in Rollup’s build process. This makes for a very easy jumping off point for the static site generator.</p>
+<h2 id="repo-structure-and-config-files">Repo Structure and Config Files</h2>
+<p>Figuring out how to organize the blog files was a challenge and I went through many different iterations before settling on using a config file. My first instinct was to have implicit folders where the blogs markdown files lived and just have the plugin look in only those folders. This approach was decent and allowed me to start implementing the actual functionality early on but as I kept thinking about adding more features such as description snippets, header images, etc. I realized that this approach was lacking. I ended up implementing a blog config file which will define all the posts as objects.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb2-1" title="1"><span class="im">export</span> <span class="im">default</span> <span class="op">{</span></a>
+<a class="sourceLine" id="cb2-2" title="2">  <span class="dt">blogs</span><span class="op">:</span> [</a>
+<a class="sourceLine" id="cb2-3" title="3">    <span class="op">{</span></a>
+<a class="sourceLine" id="cb2-4" title="4">      <span class="dt">title</span><span class="op">:</span> <span class="st">&quot;Creating a Statically Generated Blog with Rollup&quot;</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-5" title="5">      <span class="dt">date</span><span class="op">:</span> <span class="kw">new</span> <span class="at">Date</span>(<span class="st">&quot;2020/07/17&quot;</span>)<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-6" title="6">      <span class="dt">description</span><span class="op">:</span></a>
+<a class="sourceLine" id="cb2-7" title="7">        <span class="st">&quot;This page you&#39;re viewing right now was hand made with care by me using simple frontend tools! To see the full story and read about how I built my own static site generator for github pages then click the link -&gt;&quot;</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb2-8" title="8">      <span class="dt">path</span><span class="op">:</span> <span class="va">path</span>.<span class="at">resolve</span>(<span class="st">&quot;./src/blogs/2020/blog_creation.md&quot;</span>)<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-9" title="9">    <span class="op">},</span></a>
+<a class="sourceLine" id="cb2-10" title="10">  ]<span class="op">,</span></a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="op">};</span></a></code></pre></div>
+<p>Here you can see the blog object used to generate this page, it has a short description that’s added to the index page, the date of publication, title, and path to the markdown file. This approach is great because it is very extensible, in the future if I wanted to I could add a header image by just adding a property to the blog object which points to an image and add that image to the index page. The only downside to this is that it adds one more config file to keep track of but I think the benefits of being able to add features on demand far outweighs the extra minimal upkeep.</p>
+<h2 id="conclusion-of-features">Conclusion of features</h2>
+<p>I’ve given you a very short overview of the technical design and decisions I made while creating this blogging feature if you wanted to look at the code this whole site is on my <a href="https://github.com/ece-jacob-scott">public github</a>. In the future I think it would be neat to have a cover photo for each blog, in the same vein as a medium article. For a simple blogging application I think this is a great start and I’m proud of the design and implementation.</p>
+<h2 id="retrospectionconclusion">Retrospection/Conclusion</h2>
+<p>For right now I believe this blogging feature works very well for me and hopefully it will inspire to write more about my projects as I continue developing. I will try and keep a list of features that I add in future to hopefully write an updated blog on later. If you have any questions or comments tweet at <a href="https://twitter.com/frodos_brother">me</a> :). Thank you for reading my first blog I promise I will get better in the future.</p>
+</body>
+</html>

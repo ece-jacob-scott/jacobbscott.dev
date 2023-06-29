@@ -1,4 +1,4 @@
-#blog_content {
+body {
   margin-top: 0px;
   margin-bottom: 20px;
   margin-left: auto;
@@ -32,7 +32,7 @@ a:hover {
   cursor: pointer;
 }
 
-.blog-title {
+h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0px;
   font-family: "Courier New", Courier, monospace;
 }
@@ -69,12 +69,16 @@ h2 {
   margin-bottom: 0px;
 }
 
-#blog-content > p {
+p {
   font-family: inherit;
   margin-top: 0px;
   line-height: 30px;
   font-size: 20px;
   width: 600px;
+}
+
+div.sourceCode { 
+  padding: 1rem
 }
 
 @media only screen and (min-device-width: 100px) and (max-device-width: 648px) {
